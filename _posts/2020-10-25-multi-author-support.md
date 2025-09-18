@@ -15,44 +15,44 @@ permalink: /blog/added-multi-author-support/
 
 You can now create or collaborate with multiple authors,Especially when you are working with teams. Each author will have a unique page of her written articles also her profile widget in Articles written by his/her.
 
-For this every Author needs to have a unique username (without space) For eg. If Author is John Doe - the username should be **johndoe** or **john-doe** (without space).This key will be used by devlopr, to fetch individual author's profile pages internally.
+For this every Author needs to have a unique username (without space) For eg. If Author is Amar Sattaur - the username should be **amarsattaur** or **amar-sattaur** (without space).This key will be used by devlopr, to fetch individual author's profile pages internally.
 
 ### Configuring Authors :
 
-Under _authors folder create a author details file (username.md) with his/her username (as described above). For eg. **johndoe.md**.
+Under _authors folder create a author details file (username.md) with his/her username (as described above). For eg. **amarsattaur.md**.
 
-Then add this frontmatter to describe the author in **johndoe.md**.
+Then add this frontmatter to describe the author in **amarsattaur.md**.
 ```yml
 ---
-name: John Doe # Name of the Author
-username: johndoe # Username of the Author
-bio: "Hi I a John, a Web Developer and Designer." # Author Bio
-site: http://johndoe.com  # Author Website URL
-avatar: johndoe.png  # Profile Image (img path will be /assets/img/authors/johndoe.png)
-email: mail@johndoe.com  # Author Email address
+name: Amar Sattaur # Name of the Author
+username: amarsattaur # Username of the Author
+bio: "Hi I am Amar, a Web Developer and Designer." # Author Bio
+site: http://amarsattaur.com  # Author Website URL
+avatar: amarsattaur.png  # Profile Image (img path will be /assets/img/authors/amarsattaur.png)
+email: mail@amarsattaur.com  # Author Email address
 social:  # Author Social profile links
     - title: "github"
-      url: "https://github.com/johndoe"
+      url: "https://github.com/amarsattaur"
     - title: "linkedin"
-      url: "https://www.linkedin.com/in/johndoe"
+      url: "https://www.linkedin.com/in/amarsattaur"
     - title: "youtube"
       url: "https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"
     - title: "facebook"
-      url: "https://www.facebook.com/johndoe"
+      url: "https://www.facebook.com/amarsattaur"
     - title: "twitter"
-      url: "https://www.twitter.com/johndoe"
+      url: "https://www.twitter.com/amarsattaur"
     - title: "behance"
-      url: "https://behance.com/johndoe"
+      url: "https://behance.com/amarsattaur"
     - title: "instagram"
-      url: "https://instagram.com/johndoe"
+      url: "https://instagram.com/amarsattaur"
     - title: "medium"
-      url: "https://medium.com/johndoe"
+      url: "https://medium.com/amarsattaur"
     - title: "telegram"
-      url: "https://telegram.com/johndoe"
+      url: "https://telegram.com/amarsattaur"
     - title: "dribbble"
-      url: "https://dribbble.com/johndoe"
+      url: "https://dribbble.com/amarsattaur"
     - title: "flickr"
-      url: "https://flickr.com/johndoe"
+      url: "https://flickr.com/amarsattaur"
 ---
 ```
 You can create multiple authors similarly under _authors
@@ -61,36 +61,36 @@ Next, copy the same frontmatter in _data/authors.yml (under individual author us
 
 ```yml
 # Author 1
-johndoe:
-   name: John Doe
-   username: johndoe
-   site: http://johndoe.com
-   avatar: johndoe.png
-   bio: "Hi I a John, a Web Developer and Designer."
-   email: mail@johndoe.com
+amarsattaur:
+   name: Amar Sattaur
+   username: amarsattaur
+   site: http://amarsattaur.com
+   avatar: amarsattaur.png
+   bio: "Hi I am Amar, a Web Developer and Designer."
+   email: mail@amarsattaur.com
    social:
       - title: "github"
-        url: "https://github.com/johndoe"
+        url: "https://github.com/amarsattaur"
       - title: "linkedin"
-        url: "https://www.linkedin.com/in/johndoe"
+        url: "https://www.linkedin.com/in/amarsattaur"
       - title: "youtube"
         url: "https://www.youtube.com/channel/UCSfLBFFfNU9r6ihfei6VeJw"
       - title: "facebook"
-        url: "https://www.facebook.com/johndoe"
+        url: "https://www.facebook.com/amarsattaur"
       - title: "twitter"
-        url: "https://www.twitter.com/johndoe"
+        url: "https://www.twitter.com/amarsattaur"
       - title: "behance"
-        url: "https://behance.com/johndoe"
+        url: "https://behance.com/amarsattaur"
       - title: "instagram"
-        url: "https://instagram.com/johndoe"
+        url: "https://instagram.com/amarsattaur"
       - title: "medium"
-        url: "https://medium.com/johndoe"
+        url: "https://medium.com/amarsattaur"
       - title: "telegram"
-        url: "https://telegram.com/johndoe"
+        url: "https://telegram.com/amarsattaur"
       - title: "dribbble"
-        url: "https://dribbble.com/johndoe"
+        url: "https://dribbble.com/amarsattaur"
       - title: "flickr"
-        url: "https://flickr.com/johndoe"
+        url: "https://flickr.com/amarsattaur"
 
 # Author 2
 janedoe:
