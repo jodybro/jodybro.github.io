@@ -1,0 +1,5 @@
+# robots.txt for jodybro.github.io
+User-agent: *
+Allow: /
+
+Sitemap: https://jodybro.github.io/sitemap.xml

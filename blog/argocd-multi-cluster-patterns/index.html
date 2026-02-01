@@ -1,0 +1,150 @@
+<!DOCTYPE html><!--pnJl3tz3leKyTPWqEbvD0--><html lang="en" data-theme="dark"><head><meta charSet="utf-8"/><link rel="preconnect" href="/" crossorigin=""/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/bc8470f73e47345d.css" data-precedence="next"/><link rel="stylesheet" href="/_next/static/chunks/bac3bad118b058ae.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/465f799faf41e6df.js"/><script src="/_next/static/chunks/806bdb8e4a6a9b95.js" async=""></script><script src="/_next/static/chunks/f2f58a7e93290fbb.js" async=""></script><script src="/_next/static/chunks/bd1354d7a1b1bf9d.js" async=""></script><script src="/_next/static/chunks/turbopack-e8b4e1b86504c92f.js" async=""></script><script src="/_next/static/chunks/ff1a16fafef87110.js" async=""></script><script src="/_next/static/chunks/d2be314c3ece3fbe.js" async=""></script><script src="/_next/static/chunks/ee2ecbef1024ec95.js" async=""></script><link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" as="style"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Amar Sattaur | Staff DevOps &amp; Platform Engineer</title><meta name="description" content="Staff-level DevOps and Platform Engineer with deep expertise in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation. Specializing in EKS, ArgoCD, Terraform, and cross-cloud migrations."/><meta name="author" content="Amar Sattaur"/><meta name="keywords" content="DevOps Engineer,Platform Engineer,Staff Engineer,Kubernetes,EKS,ArgoCD,Terraform,AWS,GCP,Oracle Cloud,CI/CD,Infrastructure,SRE,GitHub Actions"/><meta name="creator" content="Amar Sattaur"/><meta name="robots" content="index, follow"/><meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"/><link rel="canonical" href="https://jodybro.github.io/"/><meta property="og:title" content="Amar Sattaur | Staff DevOps &amp; Platform Engineer"/><meta property="og:description" content="Staff-level DevOps and Platform Engineer specializing in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation."/><meta property="og:url" content="https://jodybro.github.io/"/><meta property="og:site_name" content="Amar Sattaur Portfolio"/><meta property="og:locale" content="en_US"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Amar Sattaur | Staff DevOps &amp; Platform Engineer"/><meta name="twitter:description" content="Staff-level DevOps and Platform Engineer specializing in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation."/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Amar Sattaur","jobTitle":"Staff DevOps & Platform Engineer","description":"Staff-level DevOps and Platform Engineer with deep expertise in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation.","url":"https://jodybro.github.io","email":"ajodasattaur@gmail.com","sameAs":["https://github.com/jodybro","https://linkedin.com/in/amarsattaur"],"knowsAbout":["Kubernetes","Amazon EKS","Google GKE","ArgoCD","Terraform","GitHub Actions","CI/CD","DevOps","Platform Engineering","Cloud Infrastructure","AWS","GCP","Oracle Cloud"],"worksFor":{"@type":"Organization","name":"Mogo Financial"}}</script><script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><nav class="navbar navbar-expand-lg fixed-top"><div class="container"><a class="navbar-brand text-info" href="/"><i class="bi bi-terminal me-2"></i>amarsattaur</a><button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list text-light fs-4"></i></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="/#about">About</a></li><li class="nav-item"><a class="nav-link" href="/#experience">Experience</a></li><li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li><li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li></ul><a href="/Amar_Sattaur_Resume.pdf" download="" class="btn btn-resume ms-lg-3 mt-3 mt-lg-0"><i class="bi bi-file-earmark-text me-2"></i>Resume</a></div></div></nav><article class="py-5" style="padding-top:120px"><div class="container py-5"><div class="row"><div class="col-lg-8 mx-auto"><nav aria-label="breadcrumb" class="mb-4"><ol class="breadcrumb"><li class="breadcrumb-item"><a class="text-info" href="/">Home</a></li><li class="breadcrumb-item"><a class="text-info" href="/blog/">Blog</a></li><li class="breadcrumb-item active text-secondary">ArgoCD Multi-Cluster</li></ol></nav><header class="mb-5"><div class="d-flex flex-wrap gap-2 mb-3"><span class="tech-badge">ArgoCD</span><span class="tech-badge">GitOps</span><span class="tech-badge">Kubernetes</span></div><h1 class="display-5 fw-bold mb-3">ArgoCD Multi-Cluster Deployment Patterns</h1><div class="d-flex align-items-center text-secondary"><span>November 2024</span><span class="mx-2">•</span><span>10 min read</span></div></header><div class="blog-content"><p class="lead text-secondary mb-4">Managing GitOps deployments across multiple Kubernetes clusters requires thoughtful architecture. The control plane model provides centralized governance while maintaining flexibility for individual environments.</p><h2 class="h3 mt-5 mb-3 text-info">Architecture Overview</h2><p class="text-secondary">In the control plane model, a central ArgoCD instance manages downstream clusters:</p><div class="custom-card p-4 my-4"><div class="text-center text-secondary" style="font-family:monospace"><pre class="mb-0">┌─────────────────────────────────────────────────────────┐
+│                  Control Plane Cluster                   │
+│  ┌─────────────────────────────────────────────────────┐ │
+│  │              ArgoCD (Hub Instance)                   │ │
+│  │  - ApplicationSets                                   │ │
+│  │  - Cluster Secrets                                   │ │
+│  │  - RBAC Policies                                     │ │
+│  └─────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────┘
+                           │
+           ┌───────────────┼───────────────┐
+           │               │               │
+           ▼               ▼               ▼
+    ┌───────────┐   ┌───────────┐   ┌───────────┐
+    │    Dev    │   │  Staging  │   │   Prod    │
+    │  Cluster  │   │  Cluster  │   │  Cluster  │
+    └───────────┘   └───────────┘   └───────────┘</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">Setting Up the Control Plane</h2><h3 class="h5 mt-4 mb-3">1. Installing ArgoCD</h3><p class="text-secondary">Deploy ArgoCD to your management cluster:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">install-argocd.sh</span></div><div class="terminal-body"><pre class="text-success mb-0"># Create namespace
+kubectl create namespace argocd
+
+# Install ArgoCD with HA configuration
+helm repo add argo https://argoproj.github.io/argo-helm
+helm install argocd argo/argo-cd \
+  --namespace argocd \
+  --set server.replicas=2 \
+  --set controller.replicas=2 \
+  --set repoServer.replicas=2 \
+  --set redis-ha.enabled=true
+
+# Get initial admin password
+kubectl -n argocd get secret argocd-initial-admin-secret \
+  -o jsonpath=&quot;{.data.password}&quot; | base64 -d</pre></div></div><h3 class="h5 mt-4 mb-3">2. Registering Target Clusters</h3><p class="text-secondary">Add downstream clusters using secrets or the ArgoCD CLI:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">cluster-secret.yaml</span></div><div class="terminal-body"><pre class="text-success mb-0">apiVersion: v1
+kind: Secret
+metadata:
+  name: prod-cluster
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+    environment: production
+type: Opaque
+stringData:
+  name: prod-cluster
+  server: https://prod-cluster.example.com
+  config: |
+    {
+      &quot;bearerToken&quot;: &quot;&lt;service-account-token&gt;&quot;,
+      &quot;tlsClientConfig&quot;: {
+        &quot;insecure&quot;: false,
+        &quot;caData&quot;: &quot;&lt;base64-encoded-ca-cert&gt;&quot;
+      }
+    }</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">ApplicationSets for Multi-Cluster</h2><p class="text-secondary">ApplicationSets enable declarative, template-driven Application generation:</p><h3 class="h5 mt-4 mb-3">Cluster Generator</h3><p class="text-secondary">Deploy to all clusters matching specific labels:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">applicationset-cluster.yaml</span></div><div class="terminal-body"><pre class="text-success mb-0">apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: platform-services
+  namespace: argocd
+spec:
+  generators:
+    - clusters:
+        selector:
+          matchLabels:
+            environment: production
+  template:
+    metadata:
+      name: &#x27;{{name}}-platform-services&#x27;
+    spec:
+      project: platform
+      source:
+        repoURL: https://github.com/org/platform-services
+        targetRevision: HEAD
+        path: &#x27;clusters/{{name}}&#x27;
+      destination:
+        server: &#x27;{{server}}&#x27;
+        namespace: platform
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true</pre></div></div><h3 class="h5 mt-4 mb-3">Git Directory Generator</h3><p class="text-secondary">Generate Applications based on directory structure:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">applicationset-git.yaml</span></div><div class="terminal-body"><pre class="text-success mb-0">apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: team-applications
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/org/app-configs
+        revision: HEAD
+        directories:
+          - path: &#x27;teams/*/apps/*&#x27;
+  template:
+    metadata:
+      name: &#x27;{{path.basename}}&#x27;
+    spec:
+      project: &#x27;{{path[1]}}&#x27;  # team name
+      source:
+        repoURL: https://github.com/org/app-configs
+        targetRevision: HEAD
+        path: &#x27;{{path}}&#x27;
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: &#x27;{{path.basename}}&#x27;</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">Image Updater Integration</h2><p class="text-secondary">Automate image updates with ArgoCD Image Updater:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">application-with-image-updater.yaml</span></div><div class="terminal-body"><pre class="text-success mb-0">apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myapp=ghcr.io/org/myapp
+    argocd-image-updater.argoproj.io/myapp.update-strategy: semver
+    argocd-image-updater.argoproj.io/myapp.allow-tags: regexp:^v[0-9]+\.[0-9]+\.[0-9]+$
+    argocd-image-updater.argoproj.io/write-back-method: git
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/org/app-configs
+    targetRevision: HEAD
+    path: apps/my-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">RBAC and Project Configuration</h2><p class="text-secondary">Define projects to isolate teams and control access:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">appproject.yaml</span></div><div class="terminal-body"><pre class="text-success mb-0">apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: team-alpha
+  namespace: argocd
+spec:
+  description: Team Alpha applications
+  sourceRepos:
+    - &#x27;https://github.com/org/team-alpha-*&#x27;
+  destinations:
+    - namespace: &#x27;team-alpha-*&#x27;
+      server: &#x27;*&#x27;
+  clusterResourceWhitelist:
+    - group: &#x27;&#x27;
+      kind: Namespace
+  namespaceResourceWhitelist:
+    - group: &#x27;*&#x27;
+      kind: &#x27;*&#x27;
+  roles:
+    - name: developer
+      policies:
+        - p, proj:team-alpha:developer, applications, *, team-alpha/*, allow
+      groups:
+        - team-alpha-developers</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">Best Practices</h2><div class="custom-card p-4 my-4"><ul class="mb-0 text-secondary"><li class="mb-2"><strong>Use ApplicationSets over individual Applications</strong> - Reduces configuration duplication and enables consistent deployments.</li><li class="mb-2"><strong>Implement progressive delivery</strong> - Deploy to dev/staging before production using wave annotations or separate ApplicationSets.</li><li class="mb-2"><strong>Enable automated sync with safeguards</strong> - Use <code>selfHeal</code> and <code>prune</code> but configure appropriate sync windows for production.</li><li class="mb-2"><strong>Centralize secrets management</strong> - Use external-secrets with AWS Secrets Manager or HashiCorp Vault.</li><li class="mb-0"><strong>Monitor sync status</strong> - Set up alerts for failed syncs and degraded applications.</li></ul></div><h2 class="h3 mt-5 mb-3 text-info">Monitoring and Observability</h2><p class="text-secondary">ArgoCD exposes Prometheus metrics for monitoring:</p><div class="terminal-card my-4"><div class="terminal-header"><div class="terminal-dot terminal-dot-red"></div><div class="terminal-dot terminal-dot-yellow"></div><div class="terminal-dot terminal-dot-green"></div><span class="ms-3 text-secondary small">Key metrics to monitor</span></div><div class="terminal-body"><pre class="text-success mb-0"># Sync status
+argocd_app_info{sync_status=&quot;OutOfSync&quot;}
+
+# Health status
+argocd_app_info{health_status=&quot;Degraded&quot;}
+
+# Sync duration
+argocd_app_sync_total
+
+# Controller queue depth
+argocd_app_reconcile_bucket</pre></div></div><h2 class="h3 mt-5 mb-3 text-info">Conclusion</h2><p class="text-secondary">The control plane model for ArgoCD provides a scalable approach to multi-cluster GitOps. By centralizing management while distributing workloads, you gain visibility and control without sacrificing flexibility.</p><p class="text-secondary">ApplicationSets are the key to managing complexity at scale - they transform cluster configuration from imperative scripts to declarative templates that adapt as your infrastructure grows.</p><div class="custom-card p-4 mt-5"><div class="d-flex align-items-center"><div class="icon-box me-3" style="width:60px;height:60px"><i class="bi bi-person fs-3"></i></div><div><h5 class="mb-1">Amar Sattaur</h5><p class="text-secondary mb-0 small">Staff DevOps Engineer with experience architecting multi-cluster ArgoCD deployments for enterprise environments.</p></div></div></div><div class="d-flex justify-content-between mt-5 pt-4 border-top border-secondary"><a class="btn btn-outline-custom" href="/blog/reusable-github-actions-workflows/"><i class="bi bi-arrow-left me-2"></i>Previous Post</a><a class="btn btn-gradient" href="/blog/">All Posts<i class="bi bi-arrow-right ms-2"></i></a></div></div></div></div></div></article><footer class="footer py-4"><div class="container"><div class="row align-items-center"><div class="col-md-6 text-center text-md-start mb-3 mb-md-0"><span class="text-secondary" style="font-family:monospace"><span class="text-info">&gt;</span> Built with Next.js &amp; Bootstrap</span></div><div class="col-md-6 text-center text-md-end"><span class="text-secondary" style="font-family:monospace">© <!-- -->2026<!-- --> Amar Sattaur</span></div></div></div></footer><!--$--><!--/$--><script src="/_next/static/chunks/465f799faf41e6df.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n4:I[47257,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ClientPageRoot\"]\n5:I[67690,[\"/_next/static/chunks/ee2ecbef1024ec95.js\"],\"default\"]\n8:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"OutletBoundary\"]\n9:\"$Sreact.suspense\"\nb:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ViewportBoundary\"]\nd:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"MetadataBoundary\"]\nf:I[68027,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n:HL[\"/_next/static/chunks/bc8470f73e47345d.css\",\"style\"]\n:HL[\"/_next/static/chunks/bac3bad118b058ae.css\",\"style\"]\n:HC[\"/\",\"\"]\n:HL[\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800\u0026family=JetBrains+Mono:wght@400;500;600;700\u0026display=swap\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"pnJl3tz3leKyTPWqEbvD0\",\"c\":[\"\",\"blog\",\"argocd-multi-cluster-patterns\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"blog\",{\"children\":[\"argocd-multi-cluster-patterns\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/bc8470f73e47345d.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/bac3bad118b058ae.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"data-theme\":\"dark\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800\u0026family=JetBrains+Mono:wght@400;500;600;700\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Amar Sattaur\\\",\\\"jobTitle\\\":\\\"Staff DevOps \u0026 Platform Engineer\\\",\\\"description\\\":\\\"Staff-level DevOps and Platform Engineer with deep expertise in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation.\\\",\\\"url\\\":\\\"https://jodybro.github.io\\\",\\\"email\\\":\\\"ajodasattaur@gmail.com\\\",\\\"sameAs\\\":[\\\"https://github.com/jodybro\\\",\\\"https://linkedin.com/in/amarsattaur\\\"],\\\"knowsAbout\\\":[\\\"Kubernetes\\\",\\\"Amazon EKS\\\",\\\"Google GKE\\\",\\\"ArgoCD\\\",\\\"Terraform\\\",\\\"GitHub Actions\\\",\\\"CI/CD\\\",\\\"DevOps\\\",\\\"Platform Engineering\\\",\\\"Cloud Infrastructure\\\",\\\"AWS\\\",\\\"GCP\\\",\\\"Oracle Cloud\\\"],\\\"worksFor\\\":{\\\"@type\\\":\\\"Organization\\\",\\\"name\\\":\\\"Mogo Financial\\\"}}\"}}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L4\",null,{\"Component\":\"$5\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@6\",\"$@7\"]}}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/ee2ecbef1024ec95.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@a\"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lb\",null,{\"children\":\"$Lc\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$Ld\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.Metadata\",\"children\":\"$Le\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"S\":true}\n"])</script><script>self.__next_f.push([1,"6:{}\n7:\"$0:f:0:1:1:children:1:children:1:children:0:props:children:0:props:serverProvidedParams:params\"\n"])</script><script>self.__next_f.push([1,"c:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"a:null\n"])</script><script>self.__next_f.push([1,"e:[[\"$\",\"title\",\"0\",{\"children\":\"Amar Sattaur | Staff DevOps \u0026 Platform Engineer\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Staff-level DevOps and Platform Engineer with deep expertise in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation. Specializing in EKS, ArgoCD, Terraform, and cross-cloud migrations.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"author\",\"content\":\"Amar Sattaur\"}],[\"$\",\"meta\",\"3\",{\"name\":\"keywords\",\"content\":\"DevOps Engineer,Platform Engineer,Staff Engineer,Kubernetes,EKS,ArgoCD,Terraform,AWS,GCP,Oracle Cloud,CI/CD,Infrastructure,SRE,GitHub Actions\"}],[\"$\",\"meta\",\"4\",{\"name\":\"creator\",\"content\":\"Amar Sattaur\"}],[\"$\",\"meta\",\"5\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"meta\",\"6\",{\"name\":\"googlebot\",\"content\":\"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1\"}],[\"$\",\"link\",\"7\",{\"rel\":\"canonical\",\"href\":\"https://jodybro.github.io/\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:title\",\"content\":\"Amar Sattaur | Staff DevOps \u0026 Platform Engineer\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:description\",\"content\":\"Staff-level DevOps and Platform Engineer specializing in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation.\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:url\",\"content\":\"https://jodybro.github.io/\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:site_name\",\"content\":\"Amar Sattaur Portfolio\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:locale\",\"content\":\"en_US\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Amar Sattaur | Staff DevOps \u0026 Platform Engineer\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Staff-level DevOps and Platform Engineer specializing in Kubernetes orchestration, CI/CD pipeline architecture, and cloud infrastructure automation.\"}]]\n"])</script></body></html>
